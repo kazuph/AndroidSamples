@@ -28,6 +28,7 @@ public class MainViewModel {
 	public Command onClickButton = new Command() {
 		@Override
 		public void Invoke(View arg0, Object... arg1) {
+			eventAggregator.publish("progress", null, null);
 			loadHtml();
 		}
 	};
